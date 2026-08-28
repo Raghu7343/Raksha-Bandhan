@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Raksha Bandhan - Venkata Lakshmi Akka</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="scene">
+    <div class="floating-elements" id="floating"></div>
+    <main class="card">
+      <div class="ribbon">Raksha Bandhan</div>
+      <h1 class="title">Happy Raksha Bandhan</h1>
+      <h2 class="subtitle">Venkata Lakshmi Akka</h2>
+      <p class="message">Celebrating the timeless bond between a sister and her beloved brother. Wishing you joy, laughter, and beautiful memories today and always.</p>
+      <a href="{{ url_for('surprise') }}" class="btn" id="openBtn">Click for Happy Raksha Bandhan</a>
+    </main>
+  </div>
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

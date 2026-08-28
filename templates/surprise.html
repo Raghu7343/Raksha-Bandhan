@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surprise - Happy Raksha Bandhan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="surprise-page">
+  <div class="bg-gradient"></div>
+  <header class="top">
+    <h1>Happy Raksha Bandhan</h1>
+    <h2>Venkata Lakshmi Akka</h2>
+  </header>
+  <main class="surprise-card">
+    <p class="sweet">A little surprise filled with love, memories and warm wishes just for you.</p>
+    <div class="video-wrap">
+      {% if video_available %}
+      <video id="rakshaVideo" src="{{ url_for('static', filename='video/' + video_filename) }}" playsinline controls preload="metadata" class="responsive-video">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="video-overlay" id="videoOverlay" aria-hidden="true">
+        <button id="unmuteBtn" class="unmute-btn">Play video with audio</button>
+      </div>
+      {% else %}
+      <div class="video-missing">
+        Add your video to the <strong>static/video</strong> folder to play it here.
+      </div>
+      {% endif %}
+    </div>
+    <p class="closing">With lots of love</p>
+  </main>
+  <div id="celebrate"></div>
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
